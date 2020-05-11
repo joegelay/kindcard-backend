@@ -12,11 +12,17 @@ exports.seed = async function(knex) {
   }).returning("id").then(records => records[0])
 
   const one_id = await knex("card").insert({
-    number: "001"
+    number: "001", 
+    email: "joegelay@gmail.com", 
+    location: "Brick, NJ", 
+    story: "First card ever!"
   }).returning("id").then(records => records[0])
 
   const two_id = await knex("card").insert({
-    number: "002"
+    number: "002", 
+    email: "phil@philzona.net", 
+    location: "Dallas, TX", 
+    story: "Second card printed"
   }).returning("id").then(records => records[0])
 
 
