@@ -17,7 +17,6 @@ exports.up = async function(knex) {
         table.integer("card_id").references("id").inTable("card")
         table.integer("user_id").references("id").inTable("user")
   })
-
     return true 
 };
 
