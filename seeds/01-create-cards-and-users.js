@@ -684,6 +684,13 @@ exports.seed = async function(knex) {
     story: "My teacher gave it to me."
   }).returning("id").then(records => records[0])
 
+  await knex("card").insert({
+    number: "083", 
+    email: "pavlounikitas@yahoo.gr", 
+    location: "Amsterdam, Netherlands", 
+    story: "I met Joe while he was couchsurfing at my apartment at the time  in Amsterdam. Then Joe went visiting other cities and on his way back to the US he spent his last night in Amsterdam once more. Joe offered  a couple beers, and we had a chilled evening at a nice spot in the center of Amsterdam having a great time. Thanks Joe, you are a great person. Keep spreading joy bro!"
+  }).returning("id").then(records => records[0])
+
   // newest card above // 
 
   await knex("card_user").insert([{
