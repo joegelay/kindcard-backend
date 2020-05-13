@@ -2,7 +2,6 @@ const express = require('express')
 const app = express()
 const database = require('./models/database-connection')
 const bodyParser = require('body-parser')
-
 const cors = require('cors')
 
 app.use(cors())
@@ -50,6 +49,11 @@ app.get("/cardLocations", (request, response) => {
 app.post('/cards', (request, response) => {
     database("card").insert(request.body).returning('*')
       .then(cards => response.json({card: cards[0]}))
+})
+
+app.post('/users', (request, response) => {
+    database("user").insert(request.body).returning('*')
+      .then(users => response.json({user: users[0]}))
 })
 
 
