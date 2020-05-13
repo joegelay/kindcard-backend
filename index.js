@@ -1,6 +1,12 @@
 const express = require('express')
 const app = express()
 const database = require('./models/database-connection')
+const bodyParser = require('body-parser')
+
+const cors = require('cors')
+
+app.use(cors())
+app.use(bodyParser.json())
 
 const port = process.env.PORT || 4000
 
@@ -27,7 +33,6 @@ app.get("/cards/:id", (request, response) => {
      })
 })
 
-
 app.get("/cardLocations", (request, response) => {
     Card.query().then(cards => {
         counter = 0 
@@ -43,8 +48,8 @@ app.get("/cardLocations", (request, response) => {
 })
 
 app.post('/cards', (request, response) => {
-   database.insert(request.body).returning('*').into('card')
-    .then(card => response.json({card}))
+    database("card").insert(request.body).returning('*')
+      .then(cards => response.json({card: cards[0]}))
 })
 
 
