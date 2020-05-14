@@ -27,7 +27,7 @@ exports.seed = async function(knex) {
 
   ////////////////
   await knex("card").insert({
-    number: "022", 
+    number: "009", 
     email: "ilyas.savas@hotmail.com", 
     location: "10009", 
     story: "I was walking in a park and one gentlemen offered me a free donut and mentioned KindCard. To be honest, i was having a really bad day. That was the first time that I actually smiled. Thanks a lot!"
