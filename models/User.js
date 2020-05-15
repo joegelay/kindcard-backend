@@ -2,23 +2,23 @@ const { Model } = require('objection')
 const database = require('./database-connection')
 Model.knex(database)
 
-const Card = require('./Card')
+const Story = require('./Story')
 
 module.exports = class User extends Model {
     static get tableName() {
         return 'user'
     }
     static relationMappings = {
-        cards: {
-            modelClass: Card,
+        stories: {
+            modelClass: Story,
             relation: Model.ManyToManyRelation,
             join: {
                 from: 'user.id',
                 through: {
-                    from: 'card_user.user_id',
-                    to: 'card_user.card_id',
+                    from: 'story_user.user_id',
+                    to: 'story_user.story_id',
                 },
-                to: 'card.id',
+                to: 'story.id',
             }
         }
     }
