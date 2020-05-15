@@ -18,6 +18,12 @@ app.get("/cards", (request, response) => {
     })
 })
 
+app.get("/cards/:id", (request, response) => {
+    Card.query().where({ id: request.params.id }).first().withGraphFetched('stories').then(card => {
+        response.json({ card })
+    })
+})
+
 app.get("/users", (request, response) => {
     User.query().withGraphFetched('stories').then(users => {
         response.json({ users })

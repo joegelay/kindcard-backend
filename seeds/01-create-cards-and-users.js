@@ -17,6 +17,10 @@ exports.seed = async function(knex) {
     number: "009"
   }).returning("id").then(records => records[0])
 
+  const card22 = await knex("card").insert({
+    number: "022"
+  }).returning("id").then(records => records[0])
+
 
   ///// seed stories ///
   await knex("story").insert({
@@ -31,6 +35,7 @@ exports.seed = async function(knex) {
 
   await knex("story").insert({
     number: "022", 
+    cardId: card22,
     email: "ebiamonte@gmail.com", 
     location: "New York, NY", 
     lat:	40.7127753,
