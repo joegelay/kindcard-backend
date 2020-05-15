@@ -3,21 +3,26 @@ const app = express()
 const database = require('./models/database-connection')
 const bodyParser = require('body-parser')
 const cors = require('cors')
+const User = require('./models/User')
+const Story = require('./models/Story')
+const Card = require('./models/Card')
 
 app.use(cors())
 app.use(bodyParser.json())
 
 const port = process.env.PORT || 4000
 
-const User = require('./models/User')
+app.get("/cards", (request, response) => {
+    Card.query().withGraphFetched('stories').then(cards => {
+        response.json({ cards })
+    })
+})
 
 app.get("/users", (request, response) => {
     User.query().withGraphFetched('stories').then(users => {
         response.json({ users })
     })
 })
-
-const Story = require('./models/Story')
 
 app.get("/stories", (request, response) => {
     Story.query().then(stories => {

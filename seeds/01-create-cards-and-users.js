@@ -1,6 +1,7 @@
 exports.seed = async function(knex) {
   await knex('user').del()
   await knex('story').del()
+  await knex('card').del()
 
   const joe_id = await knex("user").insert({
     name: "Joe"
@@ -10,9 +11,17 @@ exports.seed = async function(knex) {
     name: "Phil"
   }).returning("id").then(records => records[0])
 
-  ////////////////
+  ///// seed cards ////// 
+
+  const card9 = await knex("card").insert({
+    number: "009"
+  }).returning("id").then(records => records[0])
+
+
+  ///// seed stories ///
   await knex("story").insert({
     number: "009", 
+    cardId: card9,
     email: "ilyas.savas@hotmail.com", 
     location: "10009", 
     lat:	40.7275043,
