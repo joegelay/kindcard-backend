@@ -21,6 +21,321 @@ exports.seed = async function(knex) {
     number: "022"
   }).returning("id").then(records => records[0])
 
+  const card20 = await knex("card").insert({
+    number: "020"
+  }).returning("id").then(records => records[0])
+
+  const card181 = await knex("card").insert({
+    number: "181"
+  }).returning("id").then(records => records[0])
+
+  const card12 = await knex("card").insert({
+    number: "012"
+  }).returning("id").then(records => records[0])
+
+  const card15 = await knex("card").insert({
+    number: "015"
+  }).returning("id").then(records => records[0])
+
+  const card700 = await knex("card").insert({
+    number: "700"
+  }).returning("id").then(records => records[0])
+
+  const card214 = await knex("card").insert({
+    number: "214"
+  }).returning("id").then(records => records[0])
+
+  const card202 = await knex("card").insert({
+    number: "202"
+  }).returning("id").then(records => records[0])
+
+  const card165 = await knex("card").insert({
+    number: "165"
+  }).returning("id").then(records => records[0])
+
+  const card227 = await knex("card").insert({
+    number: "227"
+  }).returning("id").then(records => records[0])
+
+  const card10 = await knex("card").insert({
+    number: "010"
+  }).returning("id").then(records => records[0])
+
+  const card57 = await knex("card").insert({
+    number: "057"
+  }).returning("id").then(records => records[0])
+
+  const card58 = await knex("card").insert({
+    number: "058"
+  }).returning("id").then(records => records[0])
+
+  const card41 = await knex("card").insert({
+    number: "041"
+  }).returning("id").then(records => records[0])
+
+  const card44 = await knex("card").insert({
+    number: "044"
+  }).returning("id").then(records => records[0])
+
+  const card105 = await knex("card").insert({
+    number: "105"
+  }).returning("id").then(records => records[0])
+
+  const card243 = await knex("card").insert({
+    number: "243"
+  }).returning("id").then(records => records[0])
+
+  const card53 = await knex("card").insert({
+    number: "053"
+  }).returning("id").then(records => records[0])
+
+  const card139 = await knex("card").insert({
+    number: "139"
+  }).returning("id").then(records => records[0])
+
+  const card141 = await knex("card").insert({
+    number: "141"
+  }).returning("id").then(records => records[0])
+
+  const card101 = await knex("card").insert({
+    number: "101"
+  }).returning("id").then(records => records[0])
+
+  const card148 = await knex("card").insert({
+    number: "148"
+  }).returning("id").then(records => records[0])
+
+  const card92 = await knex("card").insert({
+    number: "092"
+  }).returning("id").then(records => records[0])
+
+  const card93 = await knex("card").insert({
+    number: "093"
+  }).returning("id").then(records => records[0])
+
+  const card94 = await knex("card").insert({
+    number: "094"
+  }).returning("id").then(records => records[0])
+
+  const card96 = await knex("card").insert({
+    number: "096"
+  }).returning("id").then(records => records[0])
+
+  const card97 = await knex("card").insert({
+    number: "097"
+  }).returning("id").then(records => records[0])
+
+  const card291 = await knex("card").insert({
+    number: "291"
+  }).returning("id").then(records => records[0])
+
+  const card292 = await knex("card").insert({
+    number: "292"
+  }).returning("id").then(records => records[0])
+
+  const card293 = await knex("card").insert({
+    number: "293"
+  }).returning("id").then(records => records[0])
+
+  const card254 = await knex("card").insert({
+    number: "254"
+  }).returning("id").then(records => records[0])
+
+  const card98 = await knex("card").insert({
+    number: "98"
+  }).returning("id").then(records => records[0])
+
+  const card302 = await knex("card").insert({
+    number: "302"
+  }).returning("id").then(records => records[0])
+
+  const card303 = await knex("card").insert({
+    number: "303"
+  }).returning("id").then(records => records[0])
+
+  const card304 = await knex("card").insert({
+    number: "304"
+  }).returning("id").then(records => records[0])
+
+  const card305 = await knex("card").insert({
+    number: "305"
+  }).returning("id").then(records => records[0])
+
+  const card306 = await knex("card").insert({
+    number: "306"
+  }).returning("id").then(records => records[0])
+
+  const card648 = await knex("card").insert({
+    number: "648"
+  }).returning("id").then(records => records[0])
+
+  const card650 = await knex("card").insert({
+    number: "650"
+  }).returning("id").then(records => records[0])
+
+  const card633 = await knex("card").insert({
+    number: "633"
+  }).returning("id").then(records => records[0])
+
+  const card634 = await knex("card").insert({
+    number: "634"
+  }).returning("id").then(records => records[0])
+
+  const card635 = await knex("card").insert({
+    number: "635"
+  }).returning("id").then(records => records[0])
+
+  const card636 = await knex("card").insert({
+    number: "636"
+  }).returning("id").then(records => records[0])
+
+  const card637 = await knex("card").insert({
+    number: "637"
+  }).returning("id").then(records => records[0])
+
+  const card638 = await knex("card").insert({
+    number: "638"
+  }).returning("id").then(records => records[0])
+
+  const card639 = await knex("card").insert({
+    number: "639"
+  }).returning("id").then(records => records[0])
+
+  const card640 = await knex("card").insert({
+    number: "640"
+  }).returning("id").then(records => records[0])
+
+  const card641 = await knex("card").insert({
+    number: "641"
+  }).returning("id").then(records => records[0])
+
+  const card627 = await knex("card").insert({
+    number: "627"
+  }).returning("id").then(records => records[0])
+
+  const card628 = await knex("card").insert({
+    number: "628"
+  }).returning("id").then(records => records[0])
+
+  const card780 = await knex("card").insert({
+    number: "780"
+  }).returning("id").then(records => records[0])
+
+  const card779 = await knex("card").insert({
+    number: "779"
+  }).returning("id").then(records => records[0])
+
+  const card778 = await knex("card").insert({
+    number: "778"
+  }).returning("id").then(records => records[0])
+
+  const card449 = await knex("card").insert({
+    number: "449"
+  }).returning("id").then(records => records[0])
+
+  const card719 = await knex("card").insert({
+    number: "719"
+  }).returning("id").then(records => records[0])
+
+  const card721 = await knex("card").insert({
+    number: "721"
+  }).returning("id").then(records => records[0])
+
+  const card1323 = await knex("card").insert({
+    number: "1323"
+  }).returning("id").then(records => records[0])
+
+  const card1324 = await knex("card").insert({
+    number: "1324"
+  }).returning("id").then(records => records[0])
+
+  const card1325 = await knex("card").insert({
+    number: "1325"
+  }).returning("id").then(records => records[0])
+
+  const card743 = await knex("card").insert({
+    number: "743"
+  }).returning("id").then(records => records[0])
+
+  const card744 = await knex("card").insert({
+    number: "744"
+  }).returning("id").then(records => records[0])
+
+  const card745 = await knex("card").insert({
+    number: "745"
+  }).returning("id").then(records => records[0])
+
+  const card467 = await knex("card").insert({
+    number: "467"
+  }).returning("id").then(records => records[0])
+
+  const card342 = await knex("card").insert({
+    number: "342"
+  }).returning("id").then(records => records[0])
+
+  const card699 = await knex("card").insert({
+    number: "699"
+  }).returning("id").then(records => records[0])
+
+  const card701 = await knex("card").insert({
+    number: "701"
+  }).returning("id").then(records => records[0])
+
+  const card435 = await knex("card").insert({
+    number: "435"
+  }).returning("id").then(records => records[0])
+
+  const card436 = await knex("card").insert({
+    number: "436"
+  }).returning("id").then(records => records[0])
+
+  const card340 = await knex("card").insert({
+    number: "340"
+  }).returning("id").then(records => records[0])
+
+  const card290 = await knex("card").insert({
+    number: "290"
+  }).returning("id").then(records => records[0])
+
+  const card376 = await knex("card").insert({
+    number: "376"
+  }).returning("id").then(records => records[0])
+
+  const card377 = await knex("card").insert({
+    number: "377"
+  }).returning("id").then(records => records[0])
+
+  const card343 = await knex("card").insert({
+    number: "343"
+  }).returning("id").then(records => records[0])
+
+  const card252 = await knex("card").insert({
+    number: "252"
+  }).returning("id").then(records => records[0])
+
+  const card1342 = await knex("card").insert({
+    number: "1342"
+  }).returning("id").then(records => records[0])
+
+  const card95 = await knex("card").insert({
+    number: "095"
+  }).returning("id").then(records => records[0])
+
+  const card1497 = await knex("card").insert({
+    number: "1497"
+  }).returning("id").then(records => records[0])
+
+  const card764 = await knex("card").insert({
+    number: "764"
+  }).returning("id").then(records => records[0])
+
+  const card123 = await knex("card").insert({
+    number: "123"
+  }).returning("id").then(records => records[0])
+
+  const card83 = await knex("card").insert({
+    number: "083"
+  }).returning("id").then(records => records[0])
 
   ///// seed stories ///
   await knex("story").insert({
@@ -47,6 +362,7 @@ exports.seed = async function(knex) {
     number: "020", 
     email: "dianajhiggs@gmail.com", 
     location: "New York, NY", 
+    cardId: card20,
     lat:	40.7128753,
     lng:	-74.0060728,
     story: "I was with a group of ladies visiting New York City and doing sightseeing walking. We arrived in Union Square and the young man was giving out free donuts. He passed a card to me and now I have it with me. I am now visiting my cousin in Tennessee . I am hoping to take it back to Canada Nova Scotia where I live and pass it on to someone else by doing some active kindness."
@@ -56,6 +372,7 @@ exports.seed = async function(knex) {
     number: "181", 
     email: "gibson.andreaj@gmail.com", 
     location: "83702", 
+    cardId: card181,
     lat:	43.6624385,	
     lng:	-116.1630431,
     story: "A young lady bought me some coffee and she had the sunniest smile. So nice to share kindness!"
@@ -65,6 +382,7 @@ exports.seed = async function(knex) {
     number: "012", 
     email: "cc@northrock.bm", 
     location: "10019", 
+    cardId: card12,
     lat:	40.7686973,
     lng:	-73.9918181,
     story: "A woman bought my sister in law and me lunch at Union Square Christmas market"
@@ -74,6 +392,7 @@ exports.seed = async function(knex) {
     number: "015", 
     email: "amanda.adili@gmail.com", 
     location: "10019", 
+    cardId: card15,
     lat:	40.7687973,
     lng:	-73.9919181,
     story: "I was walking in Union Square on a cold day and a kind friendly guy offered me a free donut. I asked what the catch was, and he gave me the kindcard and said he was offering it to be kind and I can pass it on! I felt warm and moved and appreciated the gesture. Genuine human kindness still exists when you least expect it. What a blessing."
@@ -83,6 +402,7 @@ exports.seed = async function(knex) {
     number: "214", 
     email: "lstoof87@gmail.com", 
     location: "10019", 
+    cardId: card214,
     lat:	40.7688973,
     lng:	-73.9920181,
     story: "We were in Central Park, and a guy was passing out hand warmers. Such a nice treat on a cold day!"
@@ -92,6 +412,7 @@ exports.seed = async function(knex) {
     number: "202", 
     email: "wilby677@aol.com", 
     location: "New York, NY", 
+    cardId: card202,
     lat:	40.7689973,
     lng:	-73.9921181,
     story: "In Central Park was given hand warmers"
@@ -101,6 +422,7 @@ exports.seed = async function(knex) {
     number: "165", 
     email: "Trippndic@aol.com", 
     location: "07753", 
+    cardId: card165,
     lat:	40.2240869,
     lng:	-74.0887576,
     story: "I recieved my card from a generous soul at the Great Wall Chinese restaurant as we engaged in conversation,  she paid for my dinner and handed me the card, a kind gesture that will not be forgotten"
@@ -110,6 +432,7 @@ exports.seed = async function(knex) {
     number: "227", 
     email: "garrytechgeek@gmail.com", 
     location: "10024", 
+    cardId: card227,
     lat:	40.7859464,
     lng:	-73.9741874,
     story: "Given to me by a friend"
@@ -119,6 +442,7 @@ exports.seed = async function(knex) {
     number: "010", 
     email: "robc7374@yahoo.com", 
     location: "08723", 
+    cardId: card10,
     lat:	40.0508979,
     lng:	-74.1357407,
     story: "It was on my windshield with 10.00 bill. The note said,”Go Cocks have a beer on me” [I have South Carolina plates]"
@@ -128,6 +452,7 @@ exports.seed = async function(knex) {
     number: "057", 
     email: "lupitamlopez9@gmail.com", 
     location: "Dallas, TX", 
+    cardId: card57,
     lat:	32.7766642,
     lng:	-96.7969879,
     story: "I was traveling  with my family and needed someone to switch seats with me, so we could fly together as a family. This nice young lady was able to switch with us. As a token of appreciation I gave her $20 dollars which she did not want to take. I told her to please pay it forward and she handed me this card. I want to take this time to thank her and let her know it is the little things in life that make people feel better. Thank you young lady!!!"
@@ -137,6 +462,7 @@ exports.seed = async function(knex) {
     number: "010", 
     email: "you@example.com", 
     location: "29576", 
+    cardId: card10,
     lat:	33.566559,
     lng:	-79.0532061,
     story: "Attached to windshield wiper"
@@ -146,6 +472,7 @@ exports.seed = async function(knex) {
     number: "058", 
     email: "danlove2020@yahoo.com", 
     location: "10980",
+    cardId: card58,
     lat:	41.2455339,
     lng:	-74.0417628,
     story: "I was hiking out of Harriman State park with my 4-year old son who had just burned his finger.  I asked the only other hiker I saw, a stranger,  if he had a first aide kit and he did. He gave us some sting relief pads that worked like a charm. Its time I started carrying a first aide kit for my family and for others that may need it."
@@ -155,6 +482,7 @@ exports.seed = async function(knex) {
     number: "041", 
     email: "vera.lentini@gmail.com", 
     location: "07712", 
+    cardId: card41,
     lat:	40.2448804,
     lng:	-74.0593872,
     story: "Initial distro"
@@ -164,6 +492,7 @@ exports.seed = async function(knex) {
     number: "044", 
     email: "cmc@christineconforti.com", 
     location: "07712",
+    cardId: card44,
     lat:	40.2449804,
     lng:	-74.0594872,
     story: "In the generous circumstance of a free networking hour, I met Joe who shared his vision for merging his brain's love for data and analytics with his heart's love kindness and positive impact. He gifted me this card, which had a very auspicious number 44 on it (a number that has deep meaning and is affirming for me). That was Kindness Moment #1. Kindness moment #2, was him giving me a concrete reason to get a  boost of joy through my own act of kindness (which I just realized I already did moments after we met, by helping a older man Bill find parking). I can't wait to pay it forward to the next beautiful soul today."
@@ -173,6 +502,7 @@ exports.seed = async function(knex) {
     number: "105", 
     email: "nlane28@gmail.com", 
     location: "Asbury Park, NJ", 
+    cardId: card105,
     lat:	40.2203907,
     lng:	-74.0120817,
     story: "I came in to just get a small cup of the best ice cream.. and a sweet couple  were ahead of me... the gentleman went and paid for me before I even realized what was going on... he handed me this card and asked me to pass it along and return the favor to someone else.  This totally made my day!"
@@ -182,6 +512,7 @@ exports.seed = async function(knex) {
     number: "243", 
     email: "gabby0726@comcast.net", 
     location: "08723", 
+    cardId: card243,
     lat:	40.0508979,
     lng:	-74.1357407,
     story: "Helping a friend moving with college."
@@ -191,6 +522,7 @@ exports.seed = async function(knex) {
     number: "053", 
     email: "mallardilucia@gmail.com", 
     location: "Berlin, Germany", 
+    cardId: card53,
     lat:	52.5200066,
     lng:	13.404954,
     story: "I received my card from my first couchsurfer who helped me to do a video editing."
@@ -200,6 +532,7 @@ exports.seed = async function(knex) {
     number: "053", 
     email: "ianluana207@gmail.com", 
     location: "Berlin, Germany", 
+    cardId: card53,
     lat:	52.520166,
     lng:	13.405054,
     story: "My sister got it from a guy at a party and the next day she gave it to me. In exchange I had to buy  toilet paper , which I did on Christmas Eve in the only Supermarket I could find open in Berlin."
@@ -209,6 +542,7 @@ exports.seed = async function(knex) {
     number: "139", 
     email: "ptiso@kellersinc.com", 
     location: "28405", 
+    cardId: card139,
     lat:	34.2426224,
     lng:	-77.8252923,
     story: "Nephew started the Kind Card Project"
@@ -218,6 +552,7 @@ exports.seed = async function(knex) {
     number: "141", 
     email: "jeneholly727@ec.rr.com", 
     location: "Willmington, NC", 
+    cardId: card141,
     lat:	34.2103894,
     lng:	-77.8868117,
     story: "My Nephew started this project and I believe in it, therefore I am spreading the kindness!"
@@ -227,6 +562,7 @@ exports.seed = async function(knex) {
     number: "101", 
     email: "Dcommand23@yahoo.com", 
     location: "Newark, NJ", 
+    cardId: card101,
     lat:	40.735657,
     lng:	-74.1723667,
     story: "I received my card from RAOC (Random Acts of Cards) on Reddit."
@@ -235,7 +571,8 @@ exports.seed = async function(knex) {
   await knex("story").insert({
     number: "148", 
     email: "mimipop18@aol.com", 
-    location: "Boca Raton, FL", 
+    location: "Boca Raton, FL",
+    cardId: card148, 
     lat:	26.3683064,
     lng:	-80.1289321,
     story: "Sent to me from my grandson!"
@@ -245,6 +582,7 @@ exports.seed = async function(knex) {
     number: "092", 
     email: "diannacarney8@gmail.com", 
     location: "02333", 
+    cardId: card92,
     lat:	42.0371506,
     lng:	-70.9427914,
     story: "I was sent my card through the mail thanks to r/RandomActsofCards!"
@@ -254,6 +592,7 @@ exports.seed = async function(knex) {
     number: "093", 
     email: "diannacarney8@gmail.com", 
     location: "02333", 
+    cardId: card93,
     lat:	42.0372506,
     lng:	-70.9428914,
     story: "I was sent my card through the mail thanks to r/RandomActsofCards!"
@@ -263,6 +602,7 @@ exports.seed = async function(knex) {
     number: "094", 
     email: "diannacarney8@gmail.com", 
     location: "02333", 
+    cardId: card94,
     lat:	42.0372606,
     lng:	-70.9429014,
     story: "I was sent my card through the mail thanks to r/RandomActsofCards!"
@@ -272,6 +612,7 @@ exports.seed = async function(knex) {
     number: "096", 
     email: "you@example.com", 
     location: "01004", 
+    cardId: card96,
     lat:	40.8639624,
     lng:	-73.9330429,
     story: "Donated to charity"
@@ -281,6 +622,7 @@ exports.seed = async function(knex) {
     number: "097", 
     email: "you@example.com", 
     location: "01003", 
+    cardId: card97,
     lat:	40.8173411,
     lng:	-73.9433299,
     story: "Gave up seat for someone"
@@ -290,6 +632,7 @@ exports.seed = async function(knex) {
     number: "291", 
     email: "ryanjkeating@outlook.com", 
     location: "84763", 
+    cardId: card291,
     lat:	37.1338095,
     lng:	-113.0428974,
     story: "From the creator of the website Joe! Joe gifted them to me to get it all going and starting the process of random acts of kindness!  Looking forward to starting it and spreading the good vibes:):):)"
@@ -299,6 +642,7 @@ exports.seed = async function(knex) {
     number: "292", 
     email: "ryanjkeating@outlook.com", 
     location: "84763", 
+    cardId: card292,
     lat:	37.1339095,
     lng:	-113.0429074,
     story: "From the creator of the website Joe! Joe gifted them to me to get it all going and starting the process of random acts of kindness!  Looking forward to starting it and spreading the good vibes:):):)"
@@ -308,6 +652,7 @@ exports.seed = async function(knex) {
     number: "293", 
     email: "mimedesign55@gmail.com", 
     location: "84763", 
+    cardId: card293,
     lat:	37.134095,
     lng:	-113.0429174,
     story: "From my boyfriend Ryan who received them from the creator of the website Joe!  Joe gifted them to Ryan to get it all going and starting the process of random acts of kindness!  Ryan then gifted one to me in a loving kiss and to start the process of spreading the good vibes randomly to others!!!"
@@ -317,6 +662,7 @@ exports.seed = async function(knex) {
     number: "254", 
     email: "hh@hh.com", 
     location: "Tallahassee, FL", 
+    cardId: card254,
     lat:	30.4383559,
     lng:	-84.2808429,
     story: "Someone bought me a coffee."
@@ -324,6 +670,7 @@ exports.seed = async function(knex) {
 
   await knex("story").insert({
     number: "254", 
+    cardId: card254,
     email: "keposada9@gmail.com", 
     location: "Tallahassee, FL", 
     lat:	30.4382559,
@@ -333,6 +680,7 @@ exports.seed = async function(knex) {
 
   await knex("story").insert({
     number: "098", 
+    cardId: card98,
     email: "chelsea.c.gould@gmail.com", 
     location: "Boston, MA", 
     lat:	42.3600825,
@@ -342,6 +690,7 @@ exports.seed = async function(knex) {
 
   await knex("story").insert({
     number: "302", 
+    cardId: card302,
     email: "cultivatekindnessbox@gmail.com", 
     location: "45030", 
     lat:	39.2667628,
@@ -351,6 +700,7 @@ exports.seed = async function(knex) {
 
   await knex("story").insert({
     number: "303", 
+    cardId: card303,
     email: "cultivatekindnessbox@gmail.com", 
     location: "45030", 
     lat:	39.2668628,
@@ -360,6 +710,7 @@ exports.seed = async function(knex) {
 
   await knex("story").insert({
     number: "304", 
+    cardId: card304,
     email: "cultivatekindnessbox@gmail.com", 
     location: "45030", 
     lat:	39.2669628,
@@ -369,6 +720,7 @@ exports.seed = async function(knex) {
 
   await knex("story").insert({
     number: "305", 
+    cardId: card305,
     email: "cultivatekindnessbox@gmail.com", 
     location: "45030", 
     lat:	39.2670628,
@@ -378,6 +730,7 @@ exports.seed = async function(knex) {
 
   await knex("story").insert({
     number: "306", 
+    cardId: card306,
     email: "cultivatekindnessbox@gmail.com", 
     location: "45030", 
     lat:	39.2671628,
@@ -387,6 +740,7 @@ exports.seed = async function(knex) {
 
   await knex("story").insert({
     number: "648", 
+    cardId: card648,
     email: "jwallenhorst6@gmail.com", 
     location: "44092", 
     lat:	41.5977963,
@@ -396,6 +750,7 @@ exports.seed = async function(knex) {
 
   await knex("story").insert({
     number: "650", 
+    cardId: card650,
     email: "bridgettetzlaff@gmail.com", 
     location: "44092", 
     lat:	41.5978963,
@@ -405,6 +760,7 @@ exports.seed = async function(knex) {
 
   await knex("story").insert({
     number: "633", 
+    cardId: card633,
     email: "sfrohwerk@wickliffeschools.com", 
     location: "44092", 
     lat:	41.5979063,
@@ -414,6 +770,7 @@ exports.seed = async function(knex) {
 
   await knex("story").insert({
     number: "634", 
+    cardId: card634,
     email: "sfrohwerk@wickliffeschools.com", 
     location: "44092", 
     lat:	41.5979163,
@@ -423,6 +780,7 @@ exports.seed = async function(knex) {
 
   await knex("story").insert({
     number: "635", 
+    cardId: card635,
     email: "sfrohwerk@wickliffeschools.com", 
     location: "44092", 
     lat:	41.5979263,
@@ -432,6 +790,7 @@ exports.seed = async function(knex) {
 
   await knex("story").insert({
     number: "636", 
+    cardId: card636,
     email: "sfrohwerk@wickliffeschools.com", 
     location: "44092", 
     lat:	41.5980263,
@@ -441,6 +800,7 @@ exports.seed = async function(knex) {
 
   await knex("story").insert({
     number: "637", 
+    cardId: card637,
     email: "sfrohwerk@wickliffeschools.com", 
     location: "44092", 
     lat:	41.5981263,
@@ -450,6 +810,7 @@ exports.seed = async function(knex) {
 
   await knex("story").insert({
     number: "638", 
+    cardId: card638,
     email: "sfrohwerk@wickliffeschools.com", 
     location: "44092", 
     lat:	41.5982263,
@@ -459,6 +820,7 @@ exports.seed = async function(knex) {
 
   await knex("story").insert({
     number: "639", 
+    cardId: card639,
     email: "sfrohwerk@wickliffeschools.com", 
     location: "44092", 
     lat:	41.5983263,
@@ -468,6 +830,7 @@ exports.seed = async function(knex) {
 
   await knex("story").insert({
     number: "640", 
+    cardId: card640,
     email: "sfrohwerk@wickliffeschools.com", 
     location: "44092", 
     lat:	41.5984263,
@@ -477,6 +840,7 @@ exports.seed = async function(knex) {
 
   await knex("story").insert({
     number: "641", 
+    cardId: card641,
     email: "sfrohwerk@wickliffeschools.com", 
     location: "44092", 
     lat:	41.5985263,
@@ -486,6 +850,7 @@ exports.seed = async function(knex) {
 
   await knex("story").insert({
     number: "627", 
+    cardId: card627,
     email: "sfrohwerk@wickliffeschools.com", 
     location: "44092", 
     lat:	41.5985363,
@@ -495,6 +860,7 @@ exports.seed = async function(knex) {
 
   await knex("story").insert({
     number: "628", 
+    cardId: card628,
     email: "sfrohwerk@wickliffeschools.com", 
     location: "44092", 
     lat:	41.5986363,
@@ -504,6 +870,7 @@ exports.seed = async function(knex) {
 
   await knex("story").insert({
     number: "633", 
+    cardId: card633,
     email: "lscalese@icloud.com", 
     location: "44092", 
     lat:	41.5987363,
@@ -513,6 +880,7 @@ exports.seed = async function(knex) {
 
   await knex("story").insert({
     number: "779", 
+    cardId: card779,
     email: "versacesamantha@gmail.com", 
     location: "30328", 
     lat:	33.9253024,
@@ -522,6 +890,7 @@ exports.seed = async function(knex) {
 
   await knex("story").insert({
     number: "778", 
+    cardId: card778,
     email: "versacesamantha@gmail.com", 
     location: "30328", 
     lat:	33.9254024,
@@ -531,6 +900,7 @@ exports.seed = async function(knex) {
 
   await knex("story").insert({
     number: "780", 
+    cardId: card780,
     email: "versacesamantha@gmail.com", 
     location: "30328", 
     lat:	33.9255024,
@@ -540,6 +910,7 @@ exports.seed = async function(knex) {
   
   await knex("story").insert({
     number: "449", 
+    cardId: card449,
     email: "justalittlegrace@yahoo.com", 
     location: "80906", 
     lat:	38.7665005,
@@ -549,6 +920,7 @@ exports.seed = async function(knex) {
 
   await knex("story").insert({
     number: "719", 
+    cardId: card719,
     email: "danamarie924@gmail.com", 
     location: "19125", 
     lat:	39.9793657,
@@ -558,6 +930,7 @@ exports.seed = async function(knex) {
 
   await knex("story").insert({
     number: "778", 
+    cardId: card778,
     email: "rebsnow94@gmail.com", 
     location: "Lawrenceville, GA", 
     lat:	33.9562149,
@@ -567,6 +940,7 @@ exports.seed = async function(knex) {
 
   await knex("story").insert({
     number: "721", 
+    cardId: card721,
     email: "bebalovee924@gmail.com", 
     location: "Philadelphia, PA", 
     lat:	39.9525839,
@@ -576,6 +950,7 @@ exports.seed = async function(knex) {
 
   await knex("story").insert({
     number: "1323", 
+    cardId: card1323,
     email: "gaunt.kyle@gmail.com", 
     location: "Raleigh, North Carolina", 
     lat:	35.7795897,
@@ -585,6 +960,7 @@ exports.seed = async function(knex) {
 
   await knex("story").insert({
     number: "1324", 
+    cardId: card1324,
     email: "gaunt.kyle@gmail.com", 
     location: "Raleigh, North Carolina", 
     lat:	35.7796897,
@@ -594,6 +970,7 @@ exports.seed = async function(knex) {
 
   await knex("story").insert({
     number: "1325", 
+    cardId: card1325,
     email: "gaunt.kyle@gmail.com", 
     location: "Raleigh, North Carolina", 
     lat:	35.7797897,
@@ -603,6 +980,7 @@ exports.seed = async function(knex) {
 
   await knex("story").insert({
     number: "743", 
+    cardId: card743,
     email: "jenileemarie12@yahoo.com", 
     location: "98513", 
     lat:	46.9959374,
@@ -612,6 +990,7 @@ exports.seed = async function(knex) {
 
   await knex("story").insert({
     number: "744", 
+    cardId: card744,
     email: "jenileemarie12@yahoo.com", 
     location: "98513", 
     lat:	46.9969374,
@@ -621,6 +1000,7 @@ exports.seed = async function(knex) {
 
   await knex("story").insert({
     number: "745", 
+    cardId: card745,
     email: "jenileemarie12@yahoo.com", 
     location: "98513", 
     lat:	46.9970374,
@@ -629,7 +1009,8 @@ exports.seed = async function(knex) {
   }).returning("id").then(records => records[0])
 
   await knex("story").insert({
-    number: "467", 
+    number: "467",
+    cardId: card467, 
     email: "you@example.com", 
     location: "53762", 
     lat:	43.0731,
@@ -639,6 +1020,7 @@ exports.seed = async function(knex) {
 
   await knex("story").insert({
     number: "342", 
+    cardId: card342,
     email: "jodi.baumberger@k12.sd.us", 
     location: "53762", 
     lat:	43.0741,
@@ -648,6 +1030,7 @@ exports.seed = async function(knex) {
 
   await knex("story").insert({
     number: "291", 
+    cardId: card291,
     email: "revolvente@hotmail.com", 
     location: "Guadalara, Mexico", 
     lat:	20.6596988,
@@ -657,6 +1040,7 @@ exports.seed = async function(knex) {
 
   await knex("story").insert({
     number: "699", 
+    cardId: card699,
     email: "carlismolen@gmail.com", 
     location: "Atlanta, Georgia", 
     lat:	33.7489954,
@@ -666,6 +1050,7 @@ exports.seed = async function(knex) {
 
   await knex("story").insert({
     number: "700", 
+    cardId: card700,
     email: "carlismolen@gmail.com", 
     location: "Atlanta, Georgia", 
     lat:	33.7589954,
@@ -675,6 +1060,7 @@ exports.seed = async function(knex) {
 
   await knex("story").insert({
     number: "701", 
+    cardId: card701,
     email: "carlismolen@gmail.com", 
     location: "Atlanta, Georgia", 
     lat:	33.7689954,
@@ -684,6 +1070,7 @@ exports.seed = async function(knex) {
 
   await knex("story").insert({
     number: "435", 
+    cardId: card435,
     email: "ohiomucks@gmail.com", 
     location: "45103", 
     lat:	39.1125485,
@@ -693,6 +1080,7 @@ exports.seed = async function(knex) {
 
   await knex("story").insert({
     number: "436", 
+    cardId: card436,
     email: "ohiomucks@gmail.com", 
     location: "45103", 
     lat:	39.1126485,
@@ -702,6 +1090,7 @@ exports.seed = async function(knex) {
 
   await knex("story").insert({
     number: "340", 
+    cardId: card340,
     email: "faithhowlett06@gmail.con", 
     location: "45150", 
     lat:	39.1680808,
@@ -711,6 +1100,7 @@ exports.seed = async function(knex) {
 
   await knex("story").insert({
     number: "290", 
+    cardId: card290,
     email: "abigail.barber@btinternet.com", 
     location: "Kendal, UK", 
     lat:	54.328006,
@@ -720,6 +1110,7 @@ exports.seed = async function(knex) {
 
   await knex("story").insert({
     number: "376", 
+    cardId: card376,
     email: "missnevaehlynne@gmail.com", 
     location: "Ohio", 
     lat:	39.9611755,
@@ -729,6 +1120,7 @@ exports.seed = async function(knex) {
 
   await knex("story").insert({
     number: "377", 
+    cardId: card377,
     email: "missnevaehlynne@gmail.com", 
     location: "Ohio", 
     lat:	39.9621755,
@@ -738,6 +1130,7 @@ exports.seed = async function(knex) {
 
   await knex("story").insert({
     number: "342", 
+    cardId: card342,
     email: "palmers603@gmail.com", 
     location: "57381", 
     lat:	44.3312583,
@@ -747,6 +1140,7 @@ exports.seed = async function(knex) {
 
   await knex("story").insert({
     number: "342", 
+    cardId: card342,
     email: "gracaroni@hotmail.com", 
     location: "57381", 
     lat:	44.3322583,
@@ -756,6 +1150,7 @@ exports.seed = async function(knex) {
 
   await knex("story").insert({
     number: "342", 
+    cardId: card342,
     email: "you@example.com", 
     location: "57362", 
     lat:	44.3332583,
@@ -765,6 +1160,7 @@ exports.seed = async function(knex) {
 
   await knex("story").insert({
     number: "342", 
+    cardId: card342,
     email: "jodi.baumberger@k12.sd.us", 
     location: "57362", 
     lat:	44.3342583,
@@ -774,6 +1170,7 @@ exports.seed = async function(knex) {
 
   await knex("story").insert({
     number: "343", 
+    cardId: card343,
     email: "kaceygross@yahoo.com", 
     location: "57362", 
     lat:	44.3352583,
@@ -783,6 +1180,7 @@ exports.seed = async function(knex) {
 
   await knex("story").insert({
     number: "290", 
+    cardId: card290,
     email: "axholland@icloud.com", 
     location: null, 
     lat:	36.155550,
@@ -792,6 +1190,7 @@ exports.seed = async function(knex) {
 
   await knex("story").insert({
     number: "252", 
+    cardId: card252,
     email: "keposada@sbcglobal.net", 
     location: "Tallahassee, Florida", 
     lat:	30.4392559,
@@ -801,6 +1200,7 @@ exports.seed = async function(knex) {
 
   await knex("story").insert({
     number: "1342", 
+    cardId: card1342,
     email: "nbrianna92@yahoo.com", 
     location: "63366", 
     lat:	38.8809704,
@@ -810,6 +1210,7 @@ exports.seed = async function(knex) {
 
   await knex("story").insert({
     number: "095", 
+    cardId: card95,
     email: "anitha999@hotmail.com", 
     location: "Melbourne, Australia", 
     lat:	-37.8136276,
@@ -819,6 +1220,7 @@ exports.seed = async function(knex) {
 
   await knex("story").insert({
     number: "1497", 
+    cardId: card1497,
     email: "you@example.com", 
     location: "Denver, Colorado", 
     lat:	39.7392358,
@@ -828,6 +1230,7 @@ exports.seed = async function(knex) {
 
   await knex("story").insert({
     number: "1497", 
+    cardId: card1497,
     email: "joegelay@gmail.com", 
     location: "Denver, Colorado", 
     lat:	39.7402358,
@@ -837,6 +1240,7 @@ exports.seed = async function(knex) {
 
   await knex("story").insert({
     number: "764", 
+    cardId: card764,
     email: "fengdina@gmail.com", 
     location: "Vancouver, Canada", 
     lat:	49.2827291,
@@ -846,6 +1250,7 @@ exports.seed = async function(knex) {
 
   await knex("story").insert({
     number: "123", 
+    cardId: card123,
     email: "chautrancindy@gmail.com", 
     location: "Sunnyvale, CA", 
     lat:	37.36883,
@@ -855,6 +1260,7 @@ exports.seed = async function(knex) {
 
   await knex("story").insert({
     number: "098", 
+    cardId: card98,
     email: "amymatthews2013@yahoo.com", 
     location: "64804", 
     lat:	37.0193161,
@@ -864,6 +1270,7 @@ exports.seed = async function(knex) {
 
   await knex("story").insert({
     number: "342", 
+    cardId: card342,
     email: "nicolegortmaker@gmail.com", 
     location: null, 
     lat:	44.4637134,
@@ -873,6 +1280,7 @@ exports.seed = async function(knex) {
 
   await knex("story").insert({
     number: "083", 
+    cardId: card83,
     email: "pavlounikitas@yahoo.gr", 
     location: "Amsterdam, Netherlands", 
     lat: 52.308398,
@@ -890,8 +1298,6 @@ exports.seed = async function(knex) {
   //   user_id: phil_id,
   //   card_id: two_id
   // }])
-
-  console.log(joe_id, phil_id)
 
   return true 
 };
