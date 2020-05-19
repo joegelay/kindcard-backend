@@ -49,8 +49,15 @@ app.post('/cards', (request, response) => {
 })
 
 app.post('/stories', (request, response) => {
-    database("story").insert(request.body).returning('*')
-      .then(stories => response.json({story: stories[0]}))
+    if (!request.body.cardId) {
+         database("card").select().where({number: request.body.number}).first()
+            .then(card => card.id)
+            .then(id => {
+                request.body.cardId = id
+                database("story").insert(request.body).returning('*')
+                    .then(stories => response.json({story: stories[0]}))
+        })
+    } 
 })
 
 app.post('/users', (request, response) => {
@@ -60,3 +67,4 @@ app.post('/users', (request, response) => {
 
 
 app.listen(port)
+
