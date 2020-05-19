@@ -18,8 +18,8 @@ app.get("/cards", (request, response) => {
     })
 })
 
-app.get("/cards/:id", (request, response) => {
-    Card.query().where({ id: request.params.id }).first().withGraphFetched('stories').then(card => {
+app.get("/cards/:number", (request, response) => {
+    Card.query().where({ number: request.params.number }).first().withGraphFetched('stories').then(card => {
         response.json({ card })
     })
 })
@@ -41,6 +41,11 @@ app.get("/stories/:id", (request, response) => {
      .then(story => {
          response.json({story})
      })
+})
+
+app.post('/cards', (request, response) => {
+    database("card").insert(request.body).returning('*')
+      .then(cards => response.json({card: cards[0]}))
 })
 
 app.post('/stories', (request, response) => {

@@ -1183,8 +1183,8 @@ exports.seed = async function(knex) {
     cardId: card290,
     email: "axholland@icloud.com", 
     location: null, 
-    lat:	36.155550,
-    lng:	-86.777048,
+    lat:	54.329007,
+    lng:	-2.75129,
     story: "I received 5 kindcards from the lovely people behind the idea. I’ve shared my first one with a hidden present in my neighbourhood and can’t wait to see how far it goes."
   }).returning("id").then(records => records[0])
 
