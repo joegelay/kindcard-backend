@@ -48,42 +48,24 @@ app.post('/cards', (request, response) => {
       .then(cards => response.json({card: cards[0]}))
 })
 
-app.post('/stories', (request, response, next) => {
-        database("card").select().where({number: request.body.number}).first()
-               .then(card => {
-                   if (card) {
-                        request.body.cardId = card.id
-                        database("story").insert(request.body).returning('*')
-                            .then(stories => response.json({story: stories[0]}))
-                   } else {
-                        console.log("CREATE NEW CARD")
-                        database("card").insert({number: request.body.number}).returning('*')
-                        .then(cards => cards[0])
-                        .then(card => {
-                            request.body.cardId = card.id
-                            database("story").insert(request.body).returning('*')
-                            .then(stories => response.json({story: stories[0]}))
-                        })
-                   }
+app.post('/stories', (request, response) => {
+    database("card").select().where({number: request.body.number}).first()
+        .then(card => {
+            if (card) {
+                request.body.cardId = card.id
+                database("story").insert(request.body).returning('*')
+                    .then(stories => response.json({story: stories[0]}))
+            } else {
+                database("card").insert({number: request.body.number}).returning('*')
+                .then(cards => cards[0])
+                .then(card => {
+                    request.body.cardId = card.id
+                    database("story").insert(request.body).returning('*')
+                    .then(stories => response.json({story: stories[0]}))
                 })
+            }
+        })
 })
-
-// app.post('/stories', async (request, response, err) => {
-//     let card
-//     try {
-//      card = await database('card').select().where({ number: request.body.number }).first();
-//     }
-//     catch (err) {
-//         card = database('card').insert({ number: request.body.number }).returning('*').then(console.log);
-//     }
-
-//     return "Card created."
-
-//     const useMe = { ...request.body };
-//     useMe.cardId = cardId;
-//     const responseBitches = await database('story').insert(useMe).returning('*')[0];
-//     return { story: responseBitches };
-//  })
 
 app.post('/users', (request, response) => {
     database("user").insert(request.body).returning('*')
