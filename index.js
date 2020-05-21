@@ -113,7 +113,17 @@ app.post('/login', async (request, response) => {
     response.json({ token })
 })
 
-app.get("/secrets", (request, response) => {
+app.get("/secrets", authenticate, (request, response) => {
+    response.json({
+        secretInfo: "Here you go!"
+    })
+
+    // if ( user.username = "joegelay" ) {
+    //     do these things...
+    // }
+})
+
+async function authenticate(request, repsonse, next){
     const { token } = request.headers.authorization.split(" ")[1]
 
     if (!token) {
@@ -127,16 +137,12 @@ app.get("/secrets", (request, response) => {
         response.sendStatus(403)
     }
 
-    const user = database("user").select().where("id", id).first()
+    const user = await database("user").select().where("id", id).first()
 
-    response.json({
-        secretInfo: "Here you go!"
-    })
+    request.user = user 
 
-    // if ( user.username = "joegelay" ) {
-    //     do these things...
-    // }
-})
+    next()
+}
 
 
 app.listen(port)
