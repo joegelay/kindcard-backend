@@ -118,13 +118,15 @@ app.get("/secrets", authenticate, (request, response) => {
         secretInfo: "Here you go!"
     })
 
+    console.log(request.user)
+
     // if ( user.username = "joegelay" ) {
     //     do these things...
     // }
 })
 
 async function authenticate(request, repsonse, next){
-    const { token } = request.headers.authorization.split(" ")[1]
+    const token = request.headers.authorization.split(" ")[1]
 
     if (!token) {
         response.sendStatus(403)
