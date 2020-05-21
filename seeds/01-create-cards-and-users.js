@@ -4,13 +4,11 @@ exports.seed = async function(knex) {
   await knex('card').del()
 
   const joe_id = await knex("user").insert({
-    username: "Joe",
     email: "joegelay@gmail.com",
     password: "Joe"
   }).returning("id").then(records => records[0])
 
   const phil_id = await knex("user").insert({
-    username: "Phil",
     email: "philzona@gmail.com",
     password: "Phil"
   }).returning("id").then(records => records[0])
