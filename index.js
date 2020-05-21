@@ -104,7 +104,11 @@ app.post('/login', async (request, response) => {
         response.sendStatus(401)
     }
 
-    const token = jwt.sign(user, process.env.SECRET)
+    const token = jwt.sign({
+        id: user.id, 
+        username: user.username,
+        email: user.email
+        }, process.env.SECRET)
 
     response.json({ token })
 })
