@@ -84,6 +84,9 @@ app.post('/users', (request, response) => {
         .then(users => {
             response.json({user: users[0], message: "Account created!"})
         })
+        .catch((error) => {
+            response.json({message: "A user already exists with this email!"})
+        })
     })
 })
 
