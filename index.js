@@ -95,13 +95,15 @@ app.post('/login', async (request, response) => {
     const user = await database("user").select().where("email", email).first()
 
     if (!user) {
-        response.sendStatus(401)
+        // response.sendStatus(401)
+        response.json({message: "Incorrect email or password"})
     }
 
     const isPasswordMatch = await bcrypt.compare(password, user.password)
 
     if (!isPasswordMatch) {
-        response.sendStatus(401)
+        // response.sendStatus(401)
+        response.json({message: "Incorrect email or password"})
     }
 
     const token = jwt.sign({
@@ -109,7 +111,7 @@ app.post('/login', async (request, response) => {
         email: user.email
         }, process.env.SECRET)
 
-    response.json({ token })
+    response.json({ token: token, message: "Logged in!" })
 })
 
 app.get("/secrets", authenticate, (request, response) => {
