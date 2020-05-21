@@ -2,6 +2,7 @@ const express = require('express')
 const app = express()
 const database = require('./models/database-connection')
 const bodyParser = require('body-parser')
+const bcrypt = require('bcrypt')
 const cors = require('cors')
 const User = require('./models/User')
 const Story = require('./models/Story')
@@ -67,9 +68,16 @@ app.post('/stories', (request, response) => {
         })
 })
 
+// app.post('/users', (request, response) => {
+//     database("user").insert(request.body).returning('*')
+//       .then(users => response.json({user: users[0]}))
+// })
 app.post('/users', (request, response) => {
-    database("user").insert(request.body).returning('*')
-      .then(users => response.json({user: users[0]}))
+    const { email, username, password } = request.body
+
+    bcrypt.hash(password, 12).then(hashedPassword => {
+        response.json({ username, hashedPassword })
+    })
 })
 
 
