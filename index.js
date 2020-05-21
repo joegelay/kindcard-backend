@@ -1,8 +1,11 @@
+require("dotenv").config()
+
 const express = require('express')
 const app = express()
 const database = require('./models/database-connection')
 const bodyParser = require('body-parser')
 const bcrypt = require('bcrypt')
+const jwt = require('jsonwebtoken')
 
 const cors = require('cors')
 
@@ -70,10 +73,6 @@ app.post('/stories', (request, response) => {
         })
 })
 
-// app.post('/users', (request, response) => {
-//     database("user").insert(request.body).returning('*')
-//       .then(users => response.json({user: users[0]}))
-// })
 app.post('/users', (request, response) => {
     const { email, username, password } = request.body
 
@@ -87,6 +86,27 @@ app.post('/users', (request, response) => {
             response.json({user: users[0]})
         })
     })
+})
+
+// Mike password123
+
+app.post('/login', async (request, response) => {
+    const { username, password } = request.body
+    const user = await database("user").select().where("username", username).first()
+
+    if (!user) {
+        response.sendStatus(401)
+    }
+
+    const isPasswordMatch = await bcrypt.compare(password, user.password)
+
+    if (!isPasswordMatch) {
+        response.sendStatus(401)
+    }
+
+    const token = jwt.sign(user, process.env.SECRET)
+
+    response.json({ token })
 })
 
 
