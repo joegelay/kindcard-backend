@@ -91,8 +91,8 @@ app.post('/users', (request, response) => {
 })
 
 app.post('/login', async (request, response) => {
-    const { username, password } = request.body
-    const user = await database("user").select().where("username", username).first()
+    const { email, password } = request.body
+    const user = await database("user").select().where("email", email).first()
 
     if (!user) {
         response.sendStatus(401)
@@ -106,7 +106,6 @@ app.post('/login', async (request, response) => {
 
     const token = jwt.sign({
         id: user.id, 
-        username: user.username,
         email: user.email
         }, process.env.SECRET)
 
