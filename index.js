@@ -120,7 +120,12 @@ app.get("/secrets", (request, response) => {
         response.sendStatus(403)
     }
 
-    const { id } = jwt.verify(token, process.env.SECRET)
+    let id
+    try {
+       id = jwt.verify(token, process.env.SECRET).id
+    } catch(error){
+        response.sendStatus(403)
+    }
 
     const user = database("user").select().where("id", id).first()
 
