@@ -88,8 +88,6 @@ app.post('/users', (request, response) => {
     })
 })
 
-// Mike password123
-
 app.post('/login', async (request, response) => {
     const { username, password } = request.body
     const user = await database("user").select().where("username", username).first()

@@ -146,7 +146,7 @@ exports.seed = async function(knex) {
   }).returning("id").then(records => records[0])
 
   const card98 = await knex("card").insert({
-    number: "98"
+    number: "098"
   }).returning("id").then(records => records[0])
 
   const card302 = await knex("card").insert({
