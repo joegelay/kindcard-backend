@@ -3,7 +3,9 @@ const app = express()
 const database = require('./models/database-connection')
 const bodyParser = require('body-parser')
 const bcrypt = require('bcrypt')
+
 const cors = require('cors')
+
 const User = require('./models/User')
 const Story = require('./models/Story')
 const Card = require('./models/Card')
@@ -76,7 +78,14 @@ app.post('/users', (request, response) => {
     const { email, username, password } = request.body
 
     bcrypt.hash(password, 12).then(hashedPassword => {
-        response.json({ username, hashedPassword })
+        database("user").insert({
+            username, 
+            email, 
+            password: hashedPassword
+        }).returning('*')
+        .then(users => {
+            response.json({user: users[0]})
+        })
     })
 })
 
