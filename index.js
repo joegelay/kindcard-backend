@@ -42,10 +42,10 @@ app.get("/stories", (request, response) => {
     })
 })
 
-app.get("/stories/:id", (request, response) => {
-    database("story").select().where({ id: request.params.id }).first()
-     .then(story => {
-         response.json({story})
+app.get("/stories/:email", (request, response) => {
+    database("story").select().where({ email: request.params.email })
+     .then(stories => {
+         response.json({ stories })
      })
 })
 

@@ -465,7 +465,7 @@ exports.seed = async function(knex) {
   await knex("story").insert({
     number: "010", 
     email: "you@example.com", 
-    location: "Murrels Inlet, Ocean County, NJ", 
+    location: "Murrells Inlet, SC", 
     cardId: card10,
     lat:	33.566559,
     lng:	-79.0532061,
