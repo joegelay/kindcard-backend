@@ -24,17 +24,10 @@ app.get("/cards", (request, response) => {
     })
 })
 
-// app.get("/stories/:email", (request, response) => {
-//     database("story").select().where({ email: request.params.email })
-//      .then(stories => {
-//          response.json({ stories })
-//      })
-// })
-
 app.get("/stories/:email", (request, response) => {
     const cardNumbers = []
     const allCards = []
-    let allStories = []
+    let userCards = []
 
     database("story").select().where({ email: request.params.email })
      .then(stories => {
@@ -45,12 +38,11 @@ app.get("/stories/:email", (request, response) => {
             cards.forEach(card => {
                 allCards.push(card)
             })
-            allStories = allCards.filter((card) => cardNumbers.includes(card.number))
-            response.json({ allStories })
+            userCards = allCards.filter((card) => cardNumbers.includes(card.number))
+            response.json({ userCards })
         })
     })
 })
-
 
 app.get("/cards/:number", (request, response) => {
     Card.query().where({ number: request.params.number }).first().withGraphFetched('stories').then(card => {
