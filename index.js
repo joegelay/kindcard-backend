@@ -24,6 +24,34 @@ app.get("/cards", (request, response) => {
     })
 })
 
+// app.get("/stories/:email", (request, response) => {
+//     database("story").select().where({ email: request.params.email })
+//      .then(stories => {
+//          response.json({ stories })
+//      })
+// })
+
+app.get("/stories/:email", (request, response) => {
+    const cardNumbers = []
+    const allCards = []
+    let allStories = []
+
+    database("story").select().where({ email: request.params.email })
+     .then(stories => {
+         stories.forEach(story => {
+             cardNumbers.push(story.number)
+         })
+         Card.query().withGraphFetched('stories').then(cards => {
+            cards.forEach(card => {
+                allCards.push(card)
+            })
+            allStories = allCards.filter((card) => cardNumbers.includes(card.number))
+            response.json({ allStories })
+        })
+    })
+})
+
+
 app.get("/cards/:number", (request, response) => {
     Card.query().where({ number: request.params.number }).first().withGraphFetched('stories').then(card => {
         response.json({ card })
@@ -42,12 +70,6 @@ app.get("/stories", (request, response) => {
     })
 })
 
-app.get("/stories/:email", (request, response) => {
-    database("story").select().where({ email: request.params.email })
-     .then(stories => {
-         response.json({ stories })
-     })
-})
 
 app.post('/cards', (request, response) => {
     database("card").insert(request.body).returning('*')
