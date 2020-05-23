@@ -6,6 +6,7 @@ const database = require('./models/database-connection')
 const bodyParser = require('body-parser')
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
+const axios = require('axios')
 
 const cors = require('cors')
 
@@ -62,11 +63,37 @@ app.get("/stories", (request, response) => {
     })
 })
 
-
 app.post('/cards', (request, response) => {
     database("card").insert(request.body).returning('*')
       .then(cards => response.json({card: cards[0]}))
 })
+
+function addEmailToMailchimp(email, cardNumber) {
+    axios({
+        method: 'POST',
+        url: 'https://us19.api.mailchimp.com/3.0/lists/94ed336b72/members', 
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        auth: {
+            username: "anystring",
+            password: process.env.MAILCHIMPAPI
+        },
+        data: {
+            email_address: email,
+            email_type: "html",
+            status: "subscribed",
+            merge_fields: {
+                FNAME: "",
+                MMERGE3: cardNumber,
+                LNAME: ""
+            }
+        }
+    })
+    .catch((error) => {
+        console.log({error: error})
+    })
+}
 
 app.post('/stories', (request, response) => {
     database("card").select().where({number: request.body.number}).first()
@@ -85,7 +112,11 @@ app.post('/stories', (request, response) => {
                 })
             }
         })
+    
+    addEmailToMailchimp(request.body.email, request.body.number)
 })
+
+
 
 app.post('/users', (request, response) => {
     const { email, password } = request.body
@@ -162,4 +193,11 @@ async function authenticate(request, repsonse, next){
 }
 
 
+
+
+
+
+
 app.listen(port)
+
+
