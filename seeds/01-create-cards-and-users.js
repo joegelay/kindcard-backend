@@ -1388,14 +1388,5 @@ exports.seed = async function(knex) {
 
   // oldest card above // 
 
-  // await knex("card_user").insert([{
-  //   user_id: joe_id,
-  //   card_id: one_id
-  // },
-  // {
-  //   user_id: phil_id,
-  //   card_id: two_id
-  // }])
-
   return true 
 };
