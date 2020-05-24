@@ -63,14 +63,14 @@ app.get("/stories", (request, response) => {
     })
 })
 
-app.delete("/story", authenticate, (request, response) => {
+app.delete("/story/:id", authenticate, (request, response) => {
+    console.log(request)
     if ( request.user.email = "joegelay@gmail.com" ) {
-        
+        database("story").where({id: request.params.id}).del()
+            .then(console.log)
     } else {
         response.sendStatus(403)
     }
-
-    database("story").select().where({id: request.body.id}).first()
 })
 
 app.post('/cards', (request, response) => {
@@ -126,8 +126,6 @@ app.post('/stories', (request, response) => {
     addEmailToMailchimp(request.body.email, request.body.number)
 })
 
-
-
 app.post('/users', (request, response) => {
     const { email, password } = request.body
 
@@ -150,14 +148,12 @@ app.post('/login', async (request, response) => {
     const user = await database("user").select().where("email", email).first()
 
     if (!user) {
-        // response.sendStatus(401)
         response.json({message: "Incorrect email or password"})
     }
 
     const isPasswordMatch = await bcrypt.compare(password, user.password)
 
     if (!isPasswordMatch) {
-        // response.sendStatus(401)
         response.json({message: "Incorrect email or password"})
     }
 
