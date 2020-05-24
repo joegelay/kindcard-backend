@@ -170,8 +170,8 @@ app.get("/admin", authenticate, (request, response) => {
 })
 
 async function authenticate(request, response, next){
-    const token = request.headers.authorization.split(" ")[1]
-
+    const token = request.headers.authorization
+   
     if (!token) {
         response.sendStatus(403)
     }
@@ -191,11 +191,4 @@ async function authenticate(request, response, next){
 }
 
 
-
-
-
-
-
 app.listen(port)
-
-
