@@ -160,7 +160,7 @@ app.post('/login', async (request, response) => {
 })
 
 app.get("/admin", authenticate, (request, response) => {
-    if ( user.username = "joegelay" ) {
+    if ( request.user.email = "joegelay@gmail.com" ) {
         response.json({
             secretInfo: "Here you go!"
         })
@@ -169,7 +169,7 @@ app.get("/admin", authenticate, (request, response) => {
     console.log(request.user)
 })
 
-async function authenticate(request, repsonse, next){
+async function authenticate(request, response, next){
     const token = request.headers.authorization.split(" ")[1]
 
     if (!token) {
