@@ -159,16 +159,14 @@ app.post('/login', async (request, response) => {
     response.json({ token: token, message: "Logged in!" })
 })
 
-app.get("/secrets", authenticate, (request, response) => {
-    response.json({
-        secretInfo: "Here you go!"
-    })
+app.get("/admin", authenticate, (request, response) => {
+    if ( user.username = "joegelay" ) {
+        response.json({
+            secretInfo: "Here you go!"
+        })
+    }
 
     console.log(request.user)
-
-    // if ( user.username = "joegelay" ) {
-    //     do these things...
-    // }
 })
 
 async function authenticate(request, repsonse, next){
