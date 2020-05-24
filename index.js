@@ -63,6 +63,16 @@ app.get("/stories", (request, response) => {
     })
 })
 
+app.delete("/story", authenticate, (request, response) => {
+    if ( request.user.email = "joegelay@gmail.com" ) {
+        
+    } else {
+        response.sendStatus(403)
+    }
+
+    database("story").select().where({id: request.body.id}).first()
+})
+
 app.post('/cards', (request, response) => {
     database("card").insert(request.body).returning('*')
       .then(cards => response.json({card: cards[0]}))
@@ -165,8 +175,6 @@ app.get("/admin", authenticate, (request, response) => {
             secretInfo: "Here you go!"
         })
     }
-
-    console.log(request.user)
 })
 
 async function authenticate(request, response, next){
