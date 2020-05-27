@@ -170,7 +170,10 @@ app.get("/admin", authenticate, (request, response) => {
         response.json({
             secretInfo: "Here you go!"
         })
+    } else {
+        response.sendStatus(403)
     }
+
 })
 
 async function authenticate(request, response, next){
