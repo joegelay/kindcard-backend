@@ -166,7 +166,7 @@ app.post('/login', async (request, response) => {
 })
 
 app.get("/admin", authenticate, (request, response) => {
-    if ( request.user.email = "joegelay@gmail.com" ) {
+    if ( request.user.email == "joegelay@gmail.com" ) {
         response.json({
             secretInfo: "Here you go!"
         })
