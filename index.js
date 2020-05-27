@@ -65,7 +65,7 @@ app.get("/stories", (request, response) => {
 
 app.delete("/story/:id", authenticate, (request, response) => {
     console.log(request)
-    if ( request.user.email = "joegelay@gmail.com" ) {
+    if ( request.user.email == "joegelay@gmail.com" ) {
         database("story").where({id: request.params.id}).del()
             .then(console.log)
     } else {
