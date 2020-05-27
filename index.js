@@ -7,6 +7,7 @@ const bodyParser = require('body-parser')
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
 const axios = require('axios')
+const sendMail = require('./mail')
 
 const cors = require('cors')
 
@@ -105,10 +106,6 @@ function addEmailToMailchimp(email, cardNumber) {
     })
 }
 
-function sendFormDataToKindCard() {
-
-}
-
 app.post('/stories', (request, response) => {
     database("card").select().where({number: request.body.number}).first()
         .then(card => {
@@ -127,11 +124,9 @@ app.post('/stories', (request, response) => {
             }
         })
     
-    
-    addEmailToMailchimp(request.body.email, request.body.number)
+        addEmailToMailchimp(request.body.email, request.body.number)
+        sendMail(request.body.email, request.body.number, request.body.location, request.body.story)
 })
-
-
 
 app.post('/users', (request, response) => {
     const { email, password } = request.body
@@ -180,7 +175,6 @@ app.get("/admin", authenticate, (request, response) => {
     } else {
         response.sendStatus(403)
     }
-
 })
 
 async function authenticate(request, response, next){

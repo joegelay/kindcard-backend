@@ -12,19 +12,19 @@ const auth = {
 
 const transporter = nodemailer.createTransport(mailGun(auth))
 
-const sendMail = (email, text) => {
+const sendMail = (email, card, location, story) => {
     const mailOptions = {
-        from: 'kindcardmap@gmail.com',
+        from: email,
         to: 'kindcardmap@gmail.com',
         subject: 'New Story Submission',
-        text: 'Testing nodemailer!'
+        text: `
+            Card #: ${card} 
+            Location: ${location}
+            Story: ${story}
+        `
     }
     
-    transporter.sendMail(mailOptions, function(err, data) {
-        if (err) {
-            console.log('Mailer error')
-        } else {
-            console.log('Message sent!!!')
-        }
-    })
+    transporter.sendMail(mailOptions)
 }
+
+module.exports = sendMail;
