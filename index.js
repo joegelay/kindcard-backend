@@ -105,6 +105,10 @@ function addEmailToMailchimp(email, cardNumber) {
     })
 }
 
+function sendFormDataToKindCard() {
+
+}
+
 app.post('/stories', (request, response) => {
     database("card").select().where({number: request.body.number}).first()
         .then(card => {
@@ -123,8 +127,11 @@ app.post('/stories', (request, response) => {
             }
         })
     
+    
     addEmailToMailchimp(request.body.email, request.body.number)
 })
+
+
 
 app.post('/users', (request, response) => {
     const { email, password } = request.body
