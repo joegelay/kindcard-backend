@@ -19,6 +19,7 @@ app.use(cors())
 app.use(bodyParser.json())
 
 const port = process.env.PORT || 4000
+const host = '127.0.0.1'
 
 app.get("/cards", (request, response) => {
     Card.query().withGraphFetched('stories').then(cards => {
@@ -199,4 +200,4 @@ async function authenticate(request, response, next){
 }
 
 
-app.listen(port)
+app.listen(port, host)
